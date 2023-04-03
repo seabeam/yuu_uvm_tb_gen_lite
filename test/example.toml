@@ -1,0 +1,15 @@
+[global]
+# Target module name in DUT source file
+in_name = 'example_wrap'
+
+# Generated module name in TB
+out_name = 'example'
+
+# Target DUT source file path
+dut_path = './example_wrap.sv'
+
+# TB output path
+out_path = '$HOME/workspace/git/yuu_uvm_tb_gen_lite/test'
+
+# Has module specific transaction
+use_item = true

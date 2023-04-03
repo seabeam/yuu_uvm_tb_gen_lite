@@ -1,0 +1,3 @@
+{% macro get_item(use) %}
+{% if use %}{{ module }}_item{% else %}uvm_sequence_item{% endif %}
+{% endmacro %}
