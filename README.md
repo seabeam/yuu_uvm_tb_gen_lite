@@ -1,10 +1,20 @@
 # yuu_tb_gen
 Lightweight common UVM TB generator
 
-## Useage
+## Install
+1. Install Python(Requires: Python >=3.6)
+2. Install toml and jinja2
+```
+pip install toml
+pip install jinja2
+```
+or
+1. Install anaconda distribution(recommend)
+
 It's recommand to add the script bin folder to your $PATH environment 
 variable if the first time to use the script.
 
+## Useage
 yuu_tb_gen.py [OPTION] [TB config file ...]
 
 optional arguments:  
