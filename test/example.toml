@@ -9,7 +9,7 @@ out_name = 'example'
 dut_path = './example_wrap.sv'
 
 # TB output path
-out_path = '$HOME/workspace/git/yuu_uvm_tb_gen_lite/test'
+out_path = '$(HOME)/workspace/git/yuu_uvm_tb_gen_lite/test'
 
 # Has module specific transaction
 use_item = true

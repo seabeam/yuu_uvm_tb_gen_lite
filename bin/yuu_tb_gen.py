@@ -36,7 +36,6 @@ def get_path(tbg_cfg : dict, args : argparse.Namespace) -> Tuple[str, str]:
     tbg_cfg['global']['out_path'] = out_path
   else:
     out_path = replace_env(tbg_cfg['global']['out_path'])
-    tbg_cfg['global']['out_path'] = out_path
 
   print(f'Script attempt to output to path "{out_path}"')
 
@@ -84,7 +83,10 @@ def replace_env(path : str) -> str:
   words = path.split('/')
   for word in words:
     if word.startswith('$'):
-      path = path.replace(word, os.environ[word[1:]])
+      if word[1:].startswith('(') or word[1:].startswith('{'):
+        path = path.replace(word, os.environ[word[2:-1]])
+      else:
+        path = path.replace(word, os.environ[word[1:]])
   return path
 
 if __name__  == '__main__':
