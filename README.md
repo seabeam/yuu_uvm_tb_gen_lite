@@ -11,7 +11,7 @@ pip install jinja2
 or
 1. Install anaconda distribution(recommend)
 
-It's recommand to add the script bin folder to your $PATH environment 
+It's recommend to add the script bin folder to your $PATH environment 
 variable if the first time to use the script.
 
 ## Useage
